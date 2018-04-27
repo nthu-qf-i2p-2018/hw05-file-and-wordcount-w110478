@@ -55,13 +55,9 @@ def main(filename):
         csv_file.close()
     with open('wordcount.json','w') as json_file:
         json.dump(counter.most_common(),json_file)
-        writer.writerow(['word', 'count'])
-        writer.writerows(counter.most_common())
         json_file.close()
     with open('wordcount.pkl','wb') as pkl_file:
         pickle.dump(counter,pkl_file)
-        writer.writerow(['word', 'count'])
-        writer.writerows(counter.most_common())
         pkl_file.close()
 
 if __name__ == '__main__':
